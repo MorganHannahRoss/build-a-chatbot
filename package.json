@@ -10,7 +10,7 @@
   "license": "MIT",
   "scripts": {
     "start": "serve Submission",
-    "test": "jest --verbose --coverage --watch",
+    "test": "jest --verbose",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint ./Submission",
     "lint:css": "stylelint **/*.css",
