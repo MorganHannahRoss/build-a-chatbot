@@ -7,43 +7,32 @@ What should I do on my day off?
 ## Inputs, processes and outputs
 
 Flowchart:
-https://excalidraw.com/#room=8222a54c402b78200e79,rxxMwYCp2OJtI0-gYVZJdw
+https://excalidraw.com/#room=8222a54c402b78200e79rxxMwYCp2OJtI0-gYVZJdw
 
 ## 1
 
-Input: “Morgan”
-
-Output: “<username> do you have any chores you have to do today?”
-
-Input: “Yes”
-
-Output: “<username> will your chores take all day?”
-
-Input: “Yes”
-
-Output: “You should probably do them or you'll end up spending the entire day staring at them.”
+Start: Hello, I am Day Decision Bot. I'm here to help you decide what to do on your day off. What is your name?
+Input: <username>
+Output: <username> do you have any chores you have to do today?
+Input: Yes
+Output: <username> will your chores take all day?
+Input: Yes
+Output: You should probably do them or you'll end up spending the entire day staring at them.
 
 ## 2
 
-Input: “Morgan”
-
+Input: “<username>”
 Output: “<username> do you have any chores you have to do today?”
-
 Input: “Yes”
-
 Output: “<username> will your chores take all day?”
-
 Input: “No”
-
 Output: “<username> will you have any energy to see anyone after you do your chores today?”
-
 Input: “Yes”
-
 Output: “Grab a coffee, or go shopping with a friend. If the evening suits you better you could always go bowling, or see a movie instead.”
 
 ## 3
 
-Input: “Morgan”
+Input: “<username>”
 
 Output: “<username> do you have any chores you have to do today?”
 
@@ -61,7 +50,8 @@ Output: “Relax and rejuvenate the best way you know how to! This could be a da
 
 ## 4
 
-Input: “Morgan”
+Input: “<username>”
+
 Output: “<username> do you have any chores you have to do today?”
 
 Input: “No”
@@ -78,7 +68,7 @@ Output: “Relax and rejuvenate the best way you know how to! This could be a da
 
 ## 5
 
-Input: “Morgan”
+Input: “<username>”
 
 Output: “<username> do you have any chores you have to do today?”
 
@@ -96,7 +86,7 @@ Output: “Go for a walk at a forest reserve, meet up with a friend and have a p
 
 ## 6
 
-Input: “Morgan”
+Input: “<username>”
 
 Output: “<username> do you have any chores you have to do today?”
 
@@ -112,7 +102,7 @@ Output: “Take a hike with friends, hit the beach for a swim, or get those gain
 
 <b>Scenario 1</b>
 
-Input: “Morgan”
+Input: “<username>”
 
 Output: “<username> do you have any chores you have to do today?”
 
@@ -130,7 +120,7 @@ Output: “You should probably do them or you'll end up spending the entire day 
 
 <b>Scenario 2</b>
 
-Input: “Morgan”
+Input: “<username>”
 
 Output: “<username> do you have any chores you have to do today?”
 
@@ -153,7 +143,7 @@ Output: “Grab a coffee, or go shopping with a friend. If the evening suits you
 
 <b>Scenario 3</b>
 
-Input: “Morgan”
+Input: “<username>”
 
 Output: “<username> do you have any chores you have to do today?”
 
@@ -176,7 +166,8 @@ Output: “Relax and rejuvenate the best way you know how to! This could be a da
 
 <b>Scenario 4</b>
 
-Input: “Morgan”
+Input: “<username>”
+
 Output: “<username> do you have any chores you have to do today?”
 
 Input: “No”
@@ -198,7 +189,7 @@ Output: “Relax and rejuvenate the best way you know how to! This could be a da
 
 <b>Scenario 5</b>
 
-Input: “Morgan”
+Input: “<username>”
 
 Output: “<username> do you have any chores you have to do today?”
 
@@ -221,7 +212,7 @@ Output: “Go for a walk at a forest reserve, meet up with a friend and have a p
 
 <b>Scenario 6</b>
 
-Input: “Morgan”
+Input: “<username>”
 
 Output: “<username> do you have any chores you have to do today?”
 

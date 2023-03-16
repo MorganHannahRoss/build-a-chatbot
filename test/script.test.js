@@ -10,12 +10,147 @@ beforeEach(() => {
   });
 });
 
-describe("getBotReply", () => {
-  it("should reply with [PUT YOUR DESCRIPTION HERE]", () => {
-    const botReply1 = getBotReply("Harry");
-    const expectedReply1 = "";
+const TEST_NAME = "Morgan";
 
-    // Uncomment the following line and update your expectation
-    // expect(botReply1).toEqual(expectedReply1);
+describe("getBotReply", () => {
+  // do chores
+  it("should reply with do chores", () => {
+    const botReply1 = getBotReply(TEST_NAME);
+    const expectedReply1 =
+      "Do you have any chores you have to do today Morgan?";
+
+    expect(botReply1).toEqual(expectedReply1);
+
+    const botReply2 = getBotReply("yes");
+    const expectedReply2 = `${TEST_NAME} will your chores take all day?`;
+    expect(botReply2).toEqual(expectedReply2);
+
+    const botReply3 = getBotReply("yes");
+    const expectedReply3 =
+      "You should probably do them or you'll end up spending the entire day staring at them.";
+    expect(botReply3).toEqual(expectedReply3);
+  });
+
+  // take a hike
+  it("should reply with take a hike", () => {
+    const botReply1 = getBotReply(TEST_NAME);
+    const expectedReply1 =
+      "Do you have any chores you have to do today Morgan?";
+
+    expect(botReply1).toEqual(expectedReply1);
+
+    const botReply2 = getBotReply("no");
+    const expectedReply2 = `${TEST_NAME} do you want to exercise today?`;
+    expect(botReply2).toEqual(expectedReply2);
+
+    const botReply3 = getBotReply("yes");
+    const expectedReply3 =
+      "Take a hike with friends, hit the beach for a swim, or get those gains at the gym if you'd rather spend the day working on yourself.";
+    expect(botReply3).toEqual(expectedReply3);
+  });
+
+  // Go for a walk at a forest reserve
+  it("should reply with grab a coffee", () => {
+    const botReply1 = getBotReply(TEST_NAME);
+    const expectedReply1 =
+      "Do you have any chores you have to do today Morgan?";
+
+    expect(botReply1).toEqual(expectedReply1);
+
+    const botReply2 = getBotReply("yes");
+    const expectedReply2 = `${TEST_NAME} will your chores take all day?`;
+    expect(botReply2).toEqual(expectedReply2);
+
+    const botReply3 = getBotReply("no");
+    const expectedReply3 = `${TEST_NAME} will you have any energy to see anyone after you do your chores today?`;
+    expect(botReply3).toEqual(expectedReply3);
+
+    const botReply4 = getBotReply("yes");
+    const expectedReply4 =
+      "Grab a coffee, or go shopping with a friend. If the evening suits you better you could always go bowling, or see a movie instead.";
+    expect(botReply4).toEqual(expectedReply4);
+  });
+
+  // Relax after chores
+  it("should reply with relax after chores", () => {
+    const botReply1 = getBotReply(TEST_NAME);
+    const expectedReply1 =
+      "Do you have any chores you have to do today Morgan?";
+
+    expect(botReply1).toEqual(expectedReply1);
+
+    const botReply2 = getBotReply("yes");
+    const expectedReply2 = `${TEST_NAME} will your chores take all day?`;
+    expect(botReply2).toEqual(expectedReply2);
+
+    const botReply3 = getBotReply("no");
+    const expectedReply3 = `${TEST_NAME} will you have any energy to see anyone after you do your chores today?`;
+    expect(botReply3).toEqual(expectedReply3);
+
+    const botReply4 = getBotReply("no");
+    const expectedReply4 =
+      "Relax and rejuvenate the best way you know how to! This could be a day binge-watching Netflix, a personal hobby, gaming, or doing an all-out spa day for yourself.";
+    expect(botReply4).toEqual(expectedReply4);
+  });
+
+  // Relax inside
+
+  it("should reply with relax inside", () => {
+    const botReply1 = getBotReply(TEST_NAME);
+    const expectedReply1 =
+      "Do you have any chores you have to do today Morgan?";
+
+    expect(botReply1).toEqual(expectedReply1);
+
+    const botReply2 = getBotReply("no");
+    const expectedReply2 = `${TEST_NAME} do you want to exercise today?`;
+    expect(botReply2).toEqual(expectedReply2);
+
+    const botReply3 = getBotReply("no");
+    const expectedReply3 = `${TEST_NAME} are you wanting to spend the day outside?`;
+    expect(botReply3).toEqual(expectedReply3);
+
+    const botReply4 = getBotReply("no");
+    const expectedReply4 =
+      "Relax and rejuvenate the best way you know how to! This could be a day binge-watching Netflix, a personal hobby, gaming, or doing an all-out spa day for yourself.";
+    expect(botReply4).toEqual(expectedReply4);
+  });
+
+  // Go for a walk at a forest reserve
+  it("should reply with go for a walk", () => {
+    const botReply1 = getBotReply(TEST_NAME);
+    const expectedReply1 =
+      "Do you have any chores you have to do today Morgan?";
+
+    expect(botReply1).toEqual(expectedReply1);
+
+    const botReply2 = getBotReply("no");
+    const expectedReply2 = `${TEST_NAME} do you want to exercise today?`;
+    expect(botReply2).toEqual(expectedReply2);
+
+    const botReply3 = getBotReply("no");
+    const expectedReply3 = `${TEST_NAME} are you wanting to spend the day outside?`;
+    expect(botReply3).toEqual(expectedReply3);
+
+    const botReply4 = getBotReply("yes");
+    const expectedReply4 =
+      "Go for a walk at a forest reserve, meet up with a friend and have a picnic at a local park, or take a sunset stroll on a beach.";
+    expect(botReply4).toEqual(expectedReply4);
+  });
+
+  // help and restart test below
+  it("should reply with help", () => {
+    const botReply1 = getBotReply("help");
+    const expectedReply1 = "Try answering 'yes' or 'no'";
+
+    expect(botReply1).toEqual(expectedReply1);
+  });
+
+  it("should reply with restart", () => {
+    const botReply1 = getBotReply("restart");
+    const expectedReply1 =
+      "Hello, I am Day Decision Bot. I'm here to help you decide what to do on your day off. What is your name?";
+
+    expect(botReply1).toEqual(expectedReply1);
   });
 });
