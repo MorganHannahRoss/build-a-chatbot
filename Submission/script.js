@@ -14,6 +14,12 @@ const getBotReply = (msg) => {
   if (username) {
     msg = msg.toLowerCase();
   }
+  if (level >= 2) {
+    if (msg !== "yes" && msg !== "no") {
+      return `I couldn't understand your reply, try answering 'yes' or 'no'.
+ Or type 'restart' to start again, or 'help' for guidence`;
+    }
+  }
 
   if (msg === "help") return "Try answering 'yes' or 'no'";
   if (msg === "restart") {
