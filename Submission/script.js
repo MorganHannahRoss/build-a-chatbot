@@ -9,6 +9,7 @@
 let level = 1;
 let branch;
 let username;
+let end = false;
 
 const getBotReply = (msg) => {
   if (username) {
@@ -26,6 +27,7 @@ const getBotReply = (msg) => {
     reset();
     return "Hello, I am Day Decision Bot. I'm here to help you decide what to do on your day off. What is your name?";
   }
+  if (end) return "Have a nice day, to start again type 'restart'";
 
   if (level === 1) {
     level = 2;
@@ -54,6 +56,7 @@ const getBotReply = (msg) => {
 
       if (msg === "yes") {
         // end and reset
+        end = true;
         reset();
         return `You should probably do them or you'll end up spending the entire day staring at them.`;
       }
@@ -67,6 +70,7 @@ const getBotReply = (msg) => {
 
       if (msg === "yes") {
         // end and reset
+        end = true;
         reset();
         return `Take a hike with friends, hit the beach for a swim, or get those gains at the gym if you'd rather spend the day working on yourself.`;
       }
@@ -84,12 +88,14 @@ const getBotReply = (msg) => {
 
       if (msg === "yes") {
         // end and reset
+        end = true;
         reset();
         return `Grab a coffee, or go shopping with a friend. If the evening suits you better you could always go bowling, or see a movie instead.`;
       }
 
       if (msg === "no") {
         // end and reset
+        end = true;
         reset();
         return `Relax and rejuvenate the best way you know how to! This could be a day binge-watching Netflix, a personal hobby, gaming, or doing an all-out spa day for yourself.`;
       }
@@ -99,12 +105,14 @@ const getBotReply = (msg) => {
 
       if (msg === "yes") {
         // end and reset
+        end = true;
         reset();
         return `Go for a walk at a forest reserve, meet up with a friend and have a picnic at a local park, or take a sunset stroll on a beach.`;
       }
 
       if (msg === "no") {
         // end and reset
+        end = true;
         reset();
         return `Relax and rejuvenate the best way you know how to! This could be a day binge-watching Netflix, a personal hobby, gaming, or doing an all-out spa day for yourself.`;
       }
