@@ -25,6 +25,7 @@ const getBotReply = (msg) => {
   if (msg === "help") return "Try answering 'yes' or 'no'";
   if (msg === "restart") {
     reset();
+    end = false;
     return "Hello, I am Day Decision Bot. I'm here to help you decide what to do on your day off. What is your name?";
   }
   if (end) return "Have a nice day, to start again type 'restart'";
